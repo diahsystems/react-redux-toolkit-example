@@ -1,24 +1,24 @@
-import { render } from "@testing-library/react";
-import React from "react";
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
-import thunk from "redux-thunk";
-import { initialState as counterInitialState } from "features/counter/counterSlice";
-import { RootState } from "app/rootReducer";
+import { render } from '@testing-library/react'
+import React from 'react'
+import { Provider } from 'react-redux'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import { initialState as counterInitialState } from 'features/counter/counterSlice'
+import { RootState } from 'app/rootReducer'
 
-const mockStore = configureStore([thunk]);
+const mockStore = configureStore([thunk])
 
 export const rootInitialState = {
   counter: counterInitialState,
-};
+}
 
 export const renderWithRedux = (
   ui: JSX.Element,
   initialState: RootState ///= rootInitialState
 ) => {
-  const store = mockStore(initialState);
+  const store = mockStore(initialState)
   return {
     ...render(<Provider store={store}>{ui}</Provider>),
     mockStore: store,
-  };
-};
+  }
+}
