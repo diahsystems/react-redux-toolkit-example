@@ -14,7 +14,7 @@ export type TodosState = {
   error: any
 }
 
-const initialState: TodosState = {
+export const initialState: TodosState = {
   entities: [],
   loading: 'idle',
   currentRequestId: undefined,

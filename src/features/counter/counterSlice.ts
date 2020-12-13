@@ -24,7 +24,7 @@ type CounterState = {
   error: any
 }
 
-const initialState: CounterState = {
+export const initialState: CounterState = {
   value: 0,
   loading: 'idle',
   error: null,

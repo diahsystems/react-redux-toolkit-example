@@ -40,7 +40,7 @@ type UsersState = {
   error: any
 }
 
-const initialState: UsersState = {
+export const initialState: UsersState = {
   entities: [],
   loading: 'idle',
   currentRequestId: undefined,
